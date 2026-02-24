@@ -17,15 +17,15 @@ export const Hero = () =>{
 
                     <div>
 
-                        <h3></h3>
+                        <h3>Mortgage Calculator</h3>
 
-                        <p></p>
+                        <p>Clear All</p>
 
                     </div>
 
                     <div>
 
-                        <p></p>
+                        <p>Mortgage Amount</p>
 
                         <input type="number" name="" id="" placeholder="€" />
 
@@ -34,13 +34,13 @@ export const Hero = () =>{
                     <div>
 
                         <div>
-                            <p></p>
-                            <input type="number" name="" id="" />
+                            <p>Mortgage Term </p>
+                            <input type="number" name="" id=""  placeholder="years"/>
                         </div>
 
                         <div>
-                            <p></p>
-                            <input type="number" name="" id="" />
+                            <p>Interest Rate</p>
+                            <input type="number" name="" id="" placeholder="%" />
                         </div>
                         
                     </div>
@@ -48,13 +48,15 @@ export const Hero = () =>{
 
                     <div>
 
-                        <p></p>
+                        <p>Mortgage Type </p>
 
-                        <button></button>
+                        <button>Repayment</button>
 
-                        <button></button>
+                        <button>Interest Only</button>
 
                     </div>
+
+                    <button>Calculate Repayments</button>
 
 
 
@@ -65,10 +67,13 @@ export const Hero = () =>{
                 <div>
                     <img src={heroimg} alt="Illustration of an empty calculator" />
 
-                    <h3></h3>
+                    <h3>Results shown here </h3>
 
-                    <p></p>
-                    
+                    <p>
+                        Complete the form and click " calculate repayments " to <br />
+                         see what your monthly repayments would be. 
+                    </p>
+
                 </div>
 
             </section>
