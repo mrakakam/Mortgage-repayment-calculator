@@ -9,7 +9,16 @@ export const Hero = () =>{
 
         <>
         
-        
+            <section>
+
+
+
+                <div></div>
+                <div>
+                    <img src={heroimg} alt="Illustration of an empty calculator" />
+                </div>
+
+            </section>
         
         
         </>
