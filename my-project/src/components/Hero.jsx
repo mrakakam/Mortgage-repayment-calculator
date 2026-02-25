@@ -213,18 +213,18 @@ export const Hero = () => {
         </div>
 
         {/* RESULTS PANEL */}
-        <div className="bg-blue-900 text-white rounded-2xl p-10 w-full flex flex-col justify-center">
+        <div className="bg-[#0f583f] text-white rounded-2xl p-10 w-full flex flex-col justify-center">
           {monthly ? (
             <>
-              <h3 className="text-2xl font-bold mb-4">Your results</h3>
-              <p className="mb-6 text-gray-200">
+              <h2 className="text-2xl font-bold  mb-4">Your results</h2>
+              <p className="mb-6 text-gray-100">
                 Your results are shown below based on the information <br />
                 you provided. To adjust the results, edit the form and <br />
                 click "calculate repayments" again.
               </p>
 
               {/* RESULT CARD */}
-              <div className="bg-blue-950 rounded-xl p-6">
+              <div className="bg-blue-950 rounded-xl p-6 border-t-6 border-amber-400">
                 <p className="text-gray-300 mb-2">Your monthly repayments</p>
                 <h2 className="text-4xl font-bold mb-4">€{monthly}</h2>
 
