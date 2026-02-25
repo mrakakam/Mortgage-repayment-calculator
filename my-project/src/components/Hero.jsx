@@ -77,10 +77,10 @@ export const Hero = () => {
 
           {/* MORTGAGE AMOUNT */}
           <div>
-            <p className="mb-1">Mortgage Amount</p>
+            <p className="mb-2 text-[#517891] font-bold ">Mortgage Amount</p>
             <div className="flex">
               <div
-                className={`px-4 py-3 rounded-l-lg ${
+                className={`px-4 py-3 rounded-l-lg font-bold text-white ${
                   errors.amount ? "bg-red-400" : "bg-blue-200"
                 }`}
               >
@@ -91,12 +91,12 @@ export const Hero = () => {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 className={`p-3 rounded-r-lg w-full outline-none border ${
-                  errors.amount ? "border-red-500" : "border-blue-300"
+                  errors.amount ? "border-red-800" : "border-blue-300"
                 } focus:border-blue-500`}
               />
             </div>
             {errors.amount && (
-              <p className="text-red-500 text-sm mt-1">This field is required</p>
+              <p className="text-red-800 text-sm mt-1 font-serif font-bold">This field is required</p>
             )}
           </div>
 
@@ -104,85 +104,108 @@ export const Hero = () => {
           <div className="flex gap-4">
             {/* TERM */}
             <div className="flex-1">
-              <p className="mb-1">Mortgage Term</p>
+              <p className="mb-2 text-[#517891] font-bold ">Mortgage Term</p>
               <div className="flex">
                 <input
                   type="number"
                   value={term}
                   onChange={(e) => setTerm(e.target.value)}
                   className={`p-3 rounded-l-lg w-full outline-none border ${
-                    errors.term ? "border-red-500" : "border-blue-300"
+                    errors.term ? "border-red-800" : "border-blue-300"
                   } focus:border-blue-500`}
                 />
                 <div
-                  className={`px-4 py-3 rounded-r-lg ${
-                    errors.term ? "bg-red-400" : "bg-blue-200"
+                  className={`px-4 py-3 rounded-r-lg font-bold text-white ${
+                    errors.term ? "bg-red-800" : "bg-blue-200"
                   }`}
                 >
                   Years
                 </div>
               </div>
               {errors.term && (
-                <p className="text-red-500 text-sm mt-1">This field is required</p>
+                <p className="text-red-800 text-sm mt-1 font-serif font-bold">This field is required</p>
               )}
             </div>
 
             {/* RATE */}
             <div className="flex-1">
-              <p className="mb-1">Interest Rate</p>
+              <p className="mb-2 text-[#517891] font-bold">Interest Rate</p>
               <div className="flex">
                 <input
                   type="number"
                   value={rate}
                   onChange={(e) => setRate(e.target.value)}
                   className={`p-3 rounded-l-lg w-full outline-none border ${
-                    errors.rate ? "border-red-500" : "border-blue-300"
+                    errors.rate ? "border-red-800" : "border-blue-300"
                   } focus:border-blue-500`}
                 />
                 <div
-                  className={`px-4 py-3 rounded-r-lg ${
-                    errors.rate ? "bg-red-400" : "bg-blue-200"
+                  className={`px-4 py-3 rounded-r-lg font-bold text-white ${
+                    errors.rate ? "bg-red-800" : "bg-blue-200"
                   }`}
                 >
                   %
                 </div>
               </div>
               {errors.rate && (
-                <p className="text-red-500 text-sm mt-1">This field is required</p>
+                <p className="text-red-800 text-sm mt-1 font-serif font-bold">This field is required</p>
               )}
             </div>
           </div>
 
-          {/* MORTGAGE TYPE */}
-          <div>
-            <p className="mb-2">Mortgage Type</p>
-            <button
-              onClick={() => setType("repayment")}
-              className={`border p-3 w-full rounded-lg mb-2 ${
-                type === "repayment" ? "bg-blue-200" : ""
-              }`}
-            >
-              Repayment
-            </button>
+       
+           {/* MORTGAGE TYPE */}
+<div>
+  <p className="mb-3 text-[#517891] font-bold">Mortgage Type</p>
 
-            <button
-              onClick={() => setType("interest")}
-              className={`border p-3 w-full rounded-lg ${
-                type === "interest" ? "bg-blue-200" : ""
-              }`}
-            >
-              Interest Only
-            </button>
+  <div className="flex gap-4">
+    {/* Repayment */}
+    <button
+      onClick={() => setType("repayment")}
+      className={`flex items-center gap-3 p-3 flex-1 rounded-lg cursor-pointer border font-bold text-[#272757] ${
+        type === "repayment"
+          ? "border-yellow-300 bg-gradient-to-r from-yellow-200 to-yellow-100"
+          : "border-blue-300 bg-white"
+      }`}
+    >
+      {/* Lemon indicator */}
+      <span
+        className={`w-4 h-4 rounded-full border ${
+          type === "repayment" ? "bg-yellow-400 border-yellow-400" : "border-gray-400"
+        }`}
+      ></span>
+      Repayment
+    </button>
 
-            {errors.type && (
-              <p className="text-red-500 text-sm mt-2">This field is required</p>
-            )}
-          </div>
+    {/* Interest Only */}
+    <button
+      onClick={() => setType("interest")}
+      className={`flex items-center gap-3 p-3 flex-1 rounded-lg cursor-pointer border font-bold text-[#272757] ${
+        type === "interest"
+          ? "border-yellow-300 bg-gradient-to-r from-yellow-200 to-yellow-100"
+          : "border-blue-300 bg-white"
+      }`}
+    >
+      {/* Lemon indicator */}
+      <span
+        className={`w-4 h-4 rounded-full border ${
+          type === "interest" ? "bg-yellow-400 border-yellow-400" : "border-gray-400"
+        }`}
+      ></span>
+      Interest Only
+    </button>
+  </div>
+
+  {errors.type && (
+    <p className="text-red-500 text-sm mt-2">This field is required</p>
+  )}
+</div>
+
 
           {/* CALCULATE BUTTON */}
           <button
             onClick={calculateMortgage}
-            className="bg-green-400 rounded-2xl p-4 flex items-center justify-center gap-3 w-full font-semibold shadow"
+            className="bg-green-400 rounded-2xl p-4 flex items-center justify-center gap-3 w-full font-bold shadow "
           >
             <img src={calculatorimg} className="w-6" />
             Calculate Repayments
