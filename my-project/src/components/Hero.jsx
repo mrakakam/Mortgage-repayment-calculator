@@ -197,7 +197,7 @@ export const Hero = () => {
   </div>
 
   {errors.type && (
-    <p className="text-red-500 text-sm mt-2">This field is required</p>
+    <p className="text-red-800 text-sm mt-1 font-serif font-bold">This field is required</p>
   )}
 </div>
 
@@ -205,7 +205,7 @@ export const Hero = () => {
           {/* CALCULATE BUTTON */}
           <button
             onClick={calculateMortgage}
-            className="bg-green-400 rounded-2xl p-4 flex items-center justify-center gap-3 w-full font-bold shadow "
+            className="bg-[#E6E600] rounded-2xl p-4 flex items-center justify-center gap-3 w-full font-bold shadow "
           >
             <img src={calculatorimg} className="w-6" />
             Calculate Repayments
@@ -216,8 +216,8 @@ export const Hero = () => {
         <div className="bg-[#0f583f] text-white rounded-2xl p-10 w-full flex flex-col justify-center">
           {monthly ? (
             <>
-              <h2 className="text-2xl font-bold  mb-4">Your results</h2>
-              <p className="mb-6 text-gray-100">
+              <h2 className="text-2xl font-bold font-mono mb-4">Your results</h2>
+              <p className="mb-6 text-gray-300 font-mono">
                 Your results are shown below based on the information <br />
                 you provided. To adjust the results, edit the form and <br />
                 click "calculate repayments" again.
@@ -225,20 +225,20 @@ export const Hero = () => {
 
               {/* RESULT CARD */}
               <div className="bg-blue-950 rounded-xl p-6 border-t-6 border-amber-400">
-                <p className="text-gray-300 mb-2">Your monthly repayments</p>
-                <h2 className="text-4xl font-bold mb-4">€{monthly}</h2>
+                <p className="text-gray-300 font-mono mb-2">Your monthly repayments</p>
+                <h2 className="text-4xl font-bold mb-4 text-[#E6E600]">€{monthly}</h2>
 
                 <hr className="mb-4" />
 
-                <p className="text-gray-300 mb-2">Total you'll repay over the term</p>
-                <h3 className="text-2xl font-bold">€{total}</h3>
+                <p className="text-gray-300 font-mono mb-2">Total you'll repay over the term</p>
+                <h3 className="text-2xl font-mono font-bold">€{total}</h3>
               </div>
             </>
           ) : (
             <div className="flex flex-col items-center text-center gap-4">
               <img src={heroimg} className="w-44" />
-              <h3>Results shown here</h3>
-              <p>
+              <h3 className="text-2xl font-bold font-mono">Results shown here</h3>
+              <p className="text-gray-300 font-mono">
                 Complete the form and click Calculate Repayments to see your monthly repayments.
               </p>
             </div>
