@@ -69,8 +69,8 @@ export const Hero = () => {
         <div className="bg-white rounded-2xl p-8 flex flex-col gap-6 w-full shadow">
           {/* HEADER */}
           <div className="flex justify-between">
-            <h3 className="text-2xl font-bold">Mortgage Calculator</h3>
-            <p onClick={clearAll} className="text-blue-600 cursor-pointer underline">
+            <h3 className="text-2xl font-bold text-[#272757]">Mortgage Calculator</h3>
+            <p onClick={clearAll} className="text-[#90D5FF] cursor-pointer underline font-bold text-sm">
               Clear All
             </p>
           </div>
